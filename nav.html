@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: "Caveat", cursive;
+ 			font-optical-sizing: auto;
+  			font-weight: 700;
+  			font-style: normal;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 0px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #8728E0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="stargate" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-rocket"></i> stargate</a>
+		<a id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Inbox</a>
+		<a id="month" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Planner</a>
+		<a id="projects" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Projects</a>
+		<a id="sharepoint" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-hands-holding-circle"></i> sharepoint</a>
+		<a id="timesheet" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-user-clock"></i> timesheet</a>
+		<a id="leads" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-person-running"></i> leads</a>
+		<a id="figma" onclick="navigate(this.id)" href="#"> <i class="fa-brands fa-figma"></i> figma</a>
+		<a id="onenote" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> onenote</a>
+
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'stargate')
+				window.open("https://www.office.com/m365apps/3ddd3bb5-bf9b-49e6-87b2-baa218f3f7b7?acctsw=1&auth=2", '_blank').focus();
+			else if (id == "inbox")
+				window.open("https://outlook.office.com/mail/", '_blank').focus();
+			else if (id == "month")
+				window.open("https://calendar.notion.so/", '_blank').focus();
+			else if (id == "projects")
+				window.open("https://www.notion.so/MetroStar-Project-Management-Plan-3860c38d98944ba3b22ce72528a504d8?pvs=12", '_blank').focus();
+			else if (id == "sharepoint")
+				window.open("https://metrostarsys.sharepoint.com/_layouts/15/sharepoint.aspx?login_hint=jearly%40metrostar.com", '_blank').focus();
+			else if (id == "timesheet")
+				window.open("https://businesscentral.dynamics.com/?company=MS%20US&dc=0", '_blank').focus();
+			else if (id == "leads")
+				window.open("https://growth.crm.dynamics.com/main.aspx?app=d365default&forceUCI=1&pagetype=entitylist&etn=mss_lead&viewid=08205931-2ce0-4abd-8c1e-634d93871178&viewType=1039", '_blank').focus();
+			else if (id == "figma")
+				window.open("https://www.figma.com/files/1020351327498464392/recents-and-sharing/recently-viewed?fuid=1129796758253906704", '_blank').focus();
+			else if (id == "onenote")
+				window.open("https://metrostarsys-my.sharepoint.com/personal/jearly_metrostar_com/_layouts/OneNote.aspx?id=%2Fpersonal%2Fjearly_metrostar_com%2FDocuments%2FNotebooks%2FMy%20Notebook", '_blank').focus();
+			
+
+		}
+	</script>
+
+
+</body>
+
+</html>
